@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Development files
+test/
+bin/
+.gitignore
+package-lock.json
+
+# Documentation (keep important docs)
+*.md
+!README.md
+!styled-charts.md
+!react-test.md
+
+# Source files (keep compiled files)
+src/
+*.ts
+*.tsx
+
+# Demo files
+demo.js
+react-demo.js
+
+# Build artifacts
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage reports
+coverage/
+.nyc_output/

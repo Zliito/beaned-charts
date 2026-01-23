@@ -1,0 +1,38 @@
+{
+  "name": "beaned-charts",
+  "version": "1.3.2",
+  "description": "Minimalist, zero-dependency SVG chart library for modern web applications",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "react-components.js",
+    "react-demo.js",
+    "styled-charts.md",
+    "react-test.md"
+  ],
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "svg",
+    "charts",
+    "minimalist",
+    "zero-dependency",
+    "bar-chart",
+    "line-chart",
+    "pie-chart",
+    "donut-chart",
+    "data-visualization",
+    "lightweight"
+  ],
+  "author": "Bean-Charts",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ez0000001000000/beaned-charts.git"
+  }
+}
