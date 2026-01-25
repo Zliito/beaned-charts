@@ -9,7 +9,8 @@
     "react-components.js",
     "react-demo.js",
     "styled-charts.md",
-    "react-test.md"
+    "react-test.md",
+    "README.md"
   ],
   "scripts": {
     "test": "node test/test.js"
@@ -34,5 +35,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ez0000001000000/beaned-charts.git"
+  },
+  "homepage": "https://github.com/ez0000001000000/beaned-charts#readme",
+  "bugs": {
+    "url": "https://github.com/ez0000001000000/beaned-charts/issues"
   }
 }
